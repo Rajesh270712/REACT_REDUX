@@ -15,11 +15,14 @@ export const TodoInput = () => {
             status:false,
             id:uuid()
         }
+
         dispatch(addTodo(payload))
+
     }
     return (
         <div>
-            <input type="text" value={title} onChange={(e)=>setTitle(e.target.value)} />
+            <center><h1>Add Todo</h1></center>
+            <input  type="text" value={title} onChange={(e)=>setTitle(e.target.value)} />
             <button onClick={handleAdd} >ADD</button>
         </div>
     )

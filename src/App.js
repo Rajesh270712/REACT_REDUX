@@ -1,12 +1,14 @@
-import { TodoInput } from "./components/todoInput";
-import { TodoList } from "./components/todoList";
-
-
+import Home from "./components/home";
+import { Routes, Route } from "react-router-dom";
+import Todo from "./components/todo";
 function App() {
   return (
-    <div >
-      <TodoInput/>
-      <TodoList/>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home/>} ></Route>
+        <Route path="/todo/:id" element={<Todo/>} ></Route>
+        {/* <Home /> */}
+      </Routes>
     </div>
   );
 }
